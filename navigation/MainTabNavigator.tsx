@@ -5,7 +5,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import ChatsScreeen from '../screens/ChatsScreeen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
@@ -41,7 +41,7 @@ export default function BottomTabNavigator() {
       />
       <MainTab.Screen
         name="Chats"
-        component={TabTwoNavigator}
+        component={ChatsScreeen}
         options={{
           tabBarIcon:({color:String})=><MaterialCommunityIcons name="chat-processing-outline" size={24} color="white" />,
           tabBarLabel:()=>null
@@ -74,7 +74,7 @@ function TabOneNavigator() {
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="TabOneScreen"
-        component={TabOneScreen}
+        component={ChatsScreeen}
         options={{ headerTitle: 'Tab One Title' }}
       />
     </TabOneStack.Navigator>

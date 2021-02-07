@@ -13,6 +13,7 @@ import { View } from '../components/Themed';
 //icons
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import ChatRoomScreen from './../screens/ChatRoom';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -60,6 +61,11 @@ function RootNavigator() {
         
         }}
        />
+      
+      <Stack.Screen name="ChatRoom" 
+      component={ChatRoomScreen} 
+      options={{ title: 'Chat Room' }} 
+      />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
